@@ -4,7 +4,7 @@ ENV ARCH=arm64
 ENV CROSS_COMPILE=aarch64-linux-gnu
  
 RUN apt-get update && \
-    apt-get install -y build-essential git clang-15 lld-15 flex bison bc libssl-dev curl kmod systemd-ukify rsync mtools dosfstools && \
+    apt-get install -y build-essential git clang-15 lld-15 flex bison bc libssl-dev curl kmod systemd-ukify rsync mtools dosfstools tmux && \
     apt-get install -y gcc-aarch64-linux-gnu && \
     apt-get install -y python3-pip swig yamllint && \
     apt install -y python3-setuptools python3-wheel && \
