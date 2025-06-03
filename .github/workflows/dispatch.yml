@@ -2,7 +2,6 @@ name: Dispatch to my-other-repo
  
 on:
   push:
-    branches: ['new-branch']
  
 jobs:
   dispatch:
