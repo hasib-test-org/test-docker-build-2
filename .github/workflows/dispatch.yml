@@ -1,0 +1,22 @@
+name: Dispatch to my-other-repo
+ 
+on:
+  push:
+    branches: ['new-branch']
+ 
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send dispatch to kernel-config
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.MY_PAT }}
+          repository: hasib-test-org/test-docker-build-2
+          event-type: i-got-it
+          client-payload: |
+            {
+              "ref": "${{ github.ref }}",
+              "repository": "${{ github.repository }}",
+              "event_name": "${{ github.event_name }}"
+            }
