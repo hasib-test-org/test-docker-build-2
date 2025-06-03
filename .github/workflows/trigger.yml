@@ -1,8 +1,6 @@
 name: Trigger Workflow in Repo1
 on:
   push:
-    paths:
-      - 'path/to/your/file.txt' # Only trigger if this file changes
 
 jobs:
   trigger:
